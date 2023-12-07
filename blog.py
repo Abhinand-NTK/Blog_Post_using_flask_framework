@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask,render_template
 
 app = Flask(__name__)
 
 @app.route("/")
-def hello_world():
-    return "<p>Hello this is abhinand, World!</p>"
+def Home():
+    return render_template('home.html')
 @app.route("/about")
 def about():
     return "<p>This is the about page i have in my application!</p>"
